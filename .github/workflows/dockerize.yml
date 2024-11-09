@@ -26,7 +26,7 @@ jobs:
     
     - name: Pull the latest changes from main
       run: |
-        git pull --rebase https://$PAT@github.com/Shree-1729/bitemeals.git main
+        git pull --rebase https://$PAT@github.com/OWNER/REPO.git main
 
     - name: Update version
       run: |
@@ -39,4 +39,4 @@ jobs:
       run: |
         git add VERSION
         git commit -m "Update version to ${{ github.sha }}"
-        git push https://$PAT@github.com/Shree-1729/bitemeals.git HEAD:main
+        git push https://$PAT@github.com/OWNER/REPO.git HEAD:main
