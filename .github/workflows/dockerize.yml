@@ -52,6 +52,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase https://$PAT@github.com/Shree-1729/bitemeals.git main
           git add VERSION
           git commit -m "Update version to ${{ env.VERSION_TAG }}"
           git push https://$PAT@github.com/Shree-1729/bitemeals.git HEAD:main
